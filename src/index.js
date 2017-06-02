@@ -14,29 +14,3 @@ const addFormListener = (postList) => {
     $('#photo-list ul').append(newPost.render())
   })
 }
-
-class PostList {
-  constructor(){
-    this.array = []
-  }
-
-  all(){
-    return this.array
-  }
-  addPost(post){
-    this.array.push(post.render())
-  }
-  render(){
-    return `<ul>${this.array}</ul>`
-  }
-}
-
-class Post {
-  constructor(url, caption){
-    this.url = url
-    this.caption = caption
-  }
-  render(){
-    return `<li><img src="${this.url}" width=350px><br/>${this.caption}<br/><br/></li>`
-  }
-}
